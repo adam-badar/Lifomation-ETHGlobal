@@ -133,12 +133,6 @@ To run Lifomation locally, follow these steps:
 
 ## Credits
 
-Lifomation was developed by:
-
-- **Yashank Bhola** - [GitHub](https://github.com/yashankbhola) | [LinkedIn](https://www.linkedin.com/in/yashankbhola/)
-- **Adam Badar** - [GitHub](https://github.com/adambadar) | [LinkedIn](https://www.linkedin.com/in/adambadar/)
-- **Dhruv Patel** - [GitHub](https://github.com/dhruvpatel) | [LinkedIn](https://www.linkedin.com/in/dhruvpatel/)
-
 Special thanks to the creators of the following tools and technologies:
 
 - [Angular](https://angular.io/)
