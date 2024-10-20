@@ -74,12 +74,12 @@ async function uploadIntoWalrus(filePath: string) {
   const fileBuffer = fs.readFileSync(filePath);
 
   // Encrypt the file content
-  // const encryptedData = encrypt(fileBuffer);
+  const encryptedData = encrypt(fileBuffer);
 
   // Store the encrypted data
   const response = await fetch(`${PUBLISHER_URL}?epochs=5`, {
     method: "PUT",
-    body: fileBuffer.toString(),
+    body: encryptedData.toString(),
     headers: { "Content-Type": "text/plain" },
   });
 
@@ -102,9 +102,9 @@ async function downloadFromWalrus(blobId: string, iv: any) {
 
   const encryptedData = await response.text(); // Get response as text
   // Decrypt the blob content
-  // const decryptedData = decrypt(Buffer.from(encryptedData));
+  const decryptedData = decrypt(Buffer.from(encryptedData));
   // console.log(decryptedData);
-  return Buffer.from(encryptedData);
+  return decryptedData;
 }
 
 // Middleware to check permissions
